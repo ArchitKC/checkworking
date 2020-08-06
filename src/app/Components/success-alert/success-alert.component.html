@@ -1,0 +1,20 @@
+<h3>
+  This is success!!!
+</h3>
+
+<div class="container">
+  <label>UserName</label>
+  <input type="text" class="form-control" placeholder="userName" [(ngModel)]="this.username">
+
+  <p>{{username}}</p>
+  <button class="btn btn-primary" [disabled]="username===''" (click)="onClick()">Add</button>
+  <p *ngIf="showSecret">Secret Password {{log}}</p>
+</div>
+<br>
+<div class="container">
+  <button class="btn btn-primary" (click)="onToggleDetails()">Display Details</button>
+  <div *ngFor="let logItem of log"
+  [ngStyle]="{backgroundColor : logItem >=5?'Blue':'transparent'}"
+  [ngClass]="{'white-text' : logItem >=5}">{{logItem}}</div>
+
+</div>

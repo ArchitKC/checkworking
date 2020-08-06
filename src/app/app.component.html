@@ -1,0 +1,33 @@
+<div class="container">
+    <app-game-control (intervalFired)="onStartGameFired($event)"></app-game-control>
+    <div class="row" style="padding-top: 30px;">
+        <div class="col-md-5">
+            <app-odd *ngFor="let oddNumber of oddNumbers" [oddNumberInput]="oddNumber" [ngStyle]="{color: 'red'}">
+            </app-odd>
+        </div>
+        <div class="col-md-7">
+            <app-even *ngFor="let evenNumber of evenNumbers" [evenNumberInput]="evenNumber" [ngStyle]="{color: 'green'}">
+            </app-even>
+        </div>
+    </div>
+
+
+
+    <!-- <app-cockpit (servCreated)="onServerAdded($event)" (blueprintCreate)="onBluePrintAdded($event)"></app-cockpit>
+    <hr>
+    <div class="row">
+        <div class="col-xs-12">
+            <app-server-element *ngFor="let serverElement of serverElements" [srvElement]="serverElement">
+            </app-server-element>
+        </div>
+    </div> -->
+    <div>
+        <p>
+            <!-- <app-warning-alert>
+        </app-warning-alert>
+
+        <app-success-alert>
+        </app-success-alert> -->
+        </p>
+    </div>
+</div>
